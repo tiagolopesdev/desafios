@@ -31,9 +31,8 @@ public class CompraSupermercado {
                     .toArray(new String[0]);
 
             Arrays.sort(unique);
-//            Arrays.stream(unique).forEach(System.out::println);
             System.out.println(Arrays.toString(unique)
-                    .replaceAll(",\\[", ""));
+                .replaceAll("[\\[|\\]|\\,]", ""));
         }
     }
 }
