@@ -1,3 +1,5 @@
+package Nitro;
+
 
 import java.util.Scanner;
 
@@ -9,7 +11,7 @@ import java.util.Scanner;
  *
  * @author tiagolopes
  */
-public class Teste {
+public class AcimaMedia {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
