@@ -35,6 +35,6 @@ public class AcimaMedia {
                 qntAlunos++;
             }
         }
-        System.out.println("Qnt Alunos: "+ qntAlunos);
+        System.out.println(qntAlunos);
     }
 }
