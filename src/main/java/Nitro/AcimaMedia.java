@@ -1,6 +1,5 @@
 package Nitro;
 
-
 import java.util.Scanner;
 
 /*
@@ -21,13 +20,15 @@ public class AcimaMedia {
         Integer numbers[] = new Integer[qntLoop];
         Integer somaNumbers = 0;
         Integer qntAlunos = 0;
-        
+
         for (int i = 0; i < qntLoop; i++) {
             numbers[i] = sc.nextInt();
-        }
-        for (int i = 0; i < qntLoop; i++) {
-            somaNumbers += numbers[i];
-        }
+            if (i > 0) {
+                somaNumbers += numbers[i];
+            } else {
+                somaNumbers += numbers[i];
+            } 
+        }        
         somaNumbers /= qntLoop;        
         
         for (int i = 0; i < qntLoop; i++) {
