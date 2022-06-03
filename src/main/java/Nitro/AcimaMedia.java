@@ -23,14 +23,10 @@ public class AcimaMedia {
 
         for (int i = 0; i < qntLoop; i++) {
             numbers[i] = sc.nextInt();
-            if (i > 0) {
-                somaNumbers += numbers[i];
-            } else {
-                somaNumbers += numbers[i];
-            } 
-        }        
-        somaNumbers /= qntLoop;        
-        
+            somaNumbers += numbers[i];
+        }
+        somaNumbers /= qntLoop;
+
         for (int i = 0; i < qntLoop; i++) {
             if (numbers[i] > somaNumbers) {
                 qntAlunos++;
