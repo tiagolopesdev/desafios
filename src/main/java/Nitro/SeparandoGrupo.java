@@ -19,14 +19,7 @@ public class SeparandoGrupo {
         String name = scan.next();
         
         Integer qntWorldName = name.length();
-        System.out.println(qntWorldName);
-        
-        name = name.replaceAll("[^\p{ASCII}]", "");
-        
-        for (int i = 0; i < 10; i++) {
-            
-        }
-        
+
         if (qntWorldName <= 4) {
             System.out.println("GRUPO A");
         } else if (qntWorldName >= 5 && qntWorldName <= 10) {
