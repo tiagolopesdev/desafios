@@ -6,6 +6,7 @@ package Nitro;
 
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
+import java.text.NumberFormat;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -19,18 +20,16 @@ public class ChegaMulta {
 
         Scanner scan = new Scanner(System.in);
 
-        Integer numberInput = scan.nextInt();
-
-        double milhaKm = 1.609344;
-        double result = numberInput * milhaKm;
+        int numberInput = scan.nextInt();
+        
+        double result = numberInput / 0.62137;
+        
+        System.out.printf("%.2f", result);
 
         DecimalFormatSymbols dfs = new DecimalFormatSymbols(Locale.US);
         dfs.setDecimalSeparator('.');
         dfs.setGroupingSeparator(',');
 
-        String pattersTwo = "###,###.##";
-
-        System.out.println(new DecimalFormat(pattersTwo, dfs).format(result));
-
+        //System.out.printf(new DecimalFormat("#,##0.00", dfs).format(numberInput / 0.62137));
     }
 }
