@@ -4,10 +4,6 @@
  */
 package Nitro;
 
-import java.text.DecimalFormat;
-import java.text.DecimalFormatSymbols;
-import java.text.NumberFormat;
-import java.util.Locale;
 import java.util.Scanner;
 
 /**
@@ -21,15 +17,9 @@ public class ChegaMulta {
         Scanner scan = new Scanner(System.in);
 
         int numberInput = scan.nextInt();
-        
+
         double result = numberInput / 0.62137;
-        
+
         System.out.printf("%.2f", result);
-
-        DecimalFormatSymbols dfs = new DecimalFormatSymbols(Locale.US);
-        dfs.setDecimalSeparator('.');
-        dfs.setGroupingSeparator(',');
-
-        //System.out.printf(new DecimalFormat("#,##0.00", dfs).format(numberInput / 0.62137));
     }
 }
