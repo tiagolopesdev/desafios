@@ -5,7 +5,6 @@
  */
 package DIO.Fundamentos_aritmeticos;
 
-import java.io.IOException;
 import java.util.Scanner;
 
 /**
