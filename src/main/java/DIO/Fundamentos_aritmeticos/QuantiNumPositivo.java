@@ -14,26 +14,28 @@ import java.util.Scanner;
  */
 public class QuantiNumPositivo {
 
-    public static void main(String[] args) throws IOException {
-
-        Scanner ler = new Scanner(System.in);
-
-        Double a;
-        Integer b = 0;
-        int i = 0;
-
-        while (i <= 5) {
-            a = ler.nextDouble();
-            if (a > 0) {
-                ler.nextLine();
-                b++;
-            } else {
-                ler.nextLine();
-            }
-            i++;
+    int contadorLoop = 0;
+    int qntNumbersPositivos = 0;
+    final int limiteNumberNatural = 0;
+    final int limiteNumbersInput = 5;    
+    
+    public String verificaNumber(double[] valuesInput) {        
+        while (contadorLoop <= limiteNumbersInput) {            
+            if (isNatural(valuesInput)) qntNumbersPositivos++;
+            contadorLoop++;
         }
-        
-        System.out.println(b + " valores positivos");
-
+        return qntNumbersPositivos + " valores positivos";
+    }
+    boolean isNatural(double[] valueInput){            
+        return valueInput[contadorLoop] > limiteNumberNatural;
+    }    
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        double[] numbersInputs = new double[6];
+        for (int i = 0; i < 6; i++) {
+            numbersInputs[i] = Double.parseDouble(scan.next());                        
+        }
+        QuantiNumPositivo numPositivo = new QuantiNumPositivo();
+        System.out.print(numPositivo.verificaNumber(numbersInputs));
     }
 }
