@@ -13,23 +13,23 @@ import java.util.*;
  */
 public class NumeroPrimo {
 
+    long qntDivisor;
+    
+    public String verificaNumber(long numberInput) {        
+        if (numerosDivisores(numberInput) == 2) {
+            return "sim";
+        }
+        return "nao";
+    }
+    long numerosDivisores(long numberDivisor){
+        for (int j = 1; j <= numberDivisor; j++) {
+            if (numberDivisor % j == 0) qntDivisor++;
+        }
+        return qntDivisor;
+    }
     public static void main(String[] args) {
-        
         Scanner scan = new Scanner(System.in);
-        
-        long numberInput = scan.nextInt();
-        
-        long divisor = 0;
-        
-        for (int i = 0; i < numberInput; i++) {
-            if (numberInput % i == 0) {
-                divisor++;                
-            }
-        }
-        if (divisor == 2) {
-            System.out.print("sim");
-        } else {
-            System.out.print("nao");            
-        }
+        NumeroPrimo numeroPrimo = new NumeroPrimo();
+        System.out.print(numeroPrimo.verificaNumber(scan.nextLong()));
     }
 }
