@@ -12,26 +12,30 @@ import java.util.*;
  * @author tiago
  */
 public class AutoEstrada {
-
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-
-        int qntLoop = scan.nextInt();
-
-        String wordInput;
+    
+    int NUMBER_CODIGO_PISTA = 2;
+    int NUMBER_CODIGO_CURVA = 2;
+    int NUMBER_CODIGO_ACESSO = 1;
+    char CODIGO_PISTA = 'P';
+    char CODIGO_CURVA = 'C';
+    char CODIGO_ACESSO = 'A';
+    
+    int exibiResult(int qntLoop, String wordInput) {
         int qntPainel = 0;
-        wordInput = scan.next();
-//        System.out.println(wordInput);
-//        System.out.println(wordInput.charAt(0));
-        for (int i = 0; i < qntLoop; i++) {            
-            if (wordInput.charAt(i) == 'P') {
-                qntPainel += 2;
-            } else if (wordInput.charAt(i) == 'C') {
-                qntPainel += 2;
-            } else if (wordInput.charAt(i) == 'A') {
-                qntPainel += 1;
+        for (int i = 0; i < qntLoop; i++) {
+            if (wordInput.charAt(i) == CODIGO_PISTA) {
+                qntPainel += NUMBER_CODIGO_PISTA;
+            } else if (wordInput.charAt(i) == CODIGO_CURVA) {
+                qntPainel += NUMBER_CODIGO_CURVA;
+            } else if (wordInput.charAt(i) == CODIGO_ACESSO) {
+                qntPainel += NUMBER_CODIGO_ACESSO;
             }
         }
-        System.out.print(qntPainel);
+        return qntPainel;
     }
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        AutoEstrada autoEstrada = new AutoEstrada();
+        System.out.println(autoEstrada.exibiResult(scan.nextInt(), scan.next()));
+    }    
 }
