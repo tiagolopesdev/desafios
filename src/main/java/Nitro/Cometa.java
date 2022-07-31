@@ -12,16 +12,15 @@ import java.util.Scanner;
  * @author tiago
  */
 public class Cometa {
+    
+    int VOLTA_TORNO_SOL = 76;
+    int PRIMEIRO_ANO = 10;
 
     long anoAtual(long anoInput) {        
-        long cal = (anoInput - 10) / 76;
-        cal++;
-        long calTwo = 10 + cal * 76;
-        return calTwo;
+        long calculation = (anoInput - PRIMEIRO_ANO) / VOLTA_TORNO_SOL + 1;                
+        return PRIMEIRO_ANO + calculation * VOLTA_TORNO_SOL;
     }
-    public static void main(String[] args) {        
-        Cometa c = new Cometa();
-        System.out.println(c.anoAtual(new Scanner(System.in).nextLong()));
-    }
-    
+    public static void main(String[] args) {                
+        System.out.println(new Cometa().anoAtual(new Scanner(System.in).nextLong()));        
+    }    
 }
